@@ -4,9 +4,9 @@ Last updated: 24 October 2026
 
 This policy explains what ApkShelf ("the app") does with your data. The app is developed by an individual developer based in Delhi, India. Contact: thedarkestknight3426@gmail.com
 
-## What the app reads
+## What the app reads on your device
 
-On your device, ApkShelf reads the list of apps installed on the current user that have a launcher icon. For each app, it reads:
+ApkShelf reads the list of apps installed on the current user that have a launcher icon. For each app, it reads:
 
 - app label (name)
 - package name
@@ -15,11 +15,19 @@ On your device, ApkShelf reads the list of apps installed on the current user th
 - the file paths of the APK files Android has already stored for that app
 - the icon Android shows for that app
 
-ApkShelf does not read your messages, contacts, call logs, location, photos, media, microphone, or camera. It does not read any file other than the APK files above.
+ApkShelf does not read your messages, contacts, call logs, location, photos, media, microphone, or camera. It does not read any file other than the APK files above. The installed-app list is never sent off your device.
 
-## What leaves your device
+## Crash reports
 
-Nothing. ApkShelf has no internet permission. It does not send any data to the developer or to any third party. It uses no analytics, advertising, or crash-reporting services.
+ApkShelf uses Google Firebase Crashlytics to receive crash reports so the developer can fix bugs. When the app crashes, Crashlytics collects:
+
+- a crash log (stack trace and the state of the app at the time)
+- diagnostic information such as device model, operating system version, and app version
+- a Firebase installation identifier that is generated for the app on your device
+
+This information is sent to Google and is used only to find and fix crashes. It does not include the list of apps installed on your device, the APK files you save, or the folder you chose. ApkShelf does not use Firebase Analytics, advertising, or any other tracking service.
+
+Google processes this data under its own terms. See https://firebase.google.com/support/privacy and https://policies.google.com/privacy.
 
 ## What the app writes
 
@@ -27,9 +35,13 @@ When you choose to save an app, ApkShelf copies that app's APK file to a folder 
 
 ## Permissions
 
-ApkShelf requests no runtime permissions. It uses a `<queries>` declaration to see apps that have a launcher icon.
+ApkShelf requests no runtime permissions. It declares the internet permission only so that crash reports can be sent. It uses a `<queries>` declaration to see apps that have a launcher icon.
 
 Apps inside a Work profile, Private Space, Secure Folder, Dual Messenger, or any other Android user profile are not shown. Some phones (for example Xiaomi) require a separate system permission before any app list is shown; if it is not granted, the list may be empty.
+
+## Your choices and deletion
+
+Crash reports are not linked to your name or email. To ask for crash data tied to your device to be deleted, email thedarkestknight3426@gmail.com and include the app version and device model. Uninstalling the app removes the installation identifier on your device.
 
 ## Children
 
