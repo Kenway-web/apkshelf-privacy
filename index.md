@@ -1,6 +1,6 @@
 # Privacy Policy for ApkShelf
 
-Last updated: 24 October 2026
+Last updated: 29 October 2026
 
 This policy explains what ApkShelf ("the app") does with your data. The app is developed by an individual developer based in Delhi, India. Contact: thedarkestknight3426@gmail.com
 
@@ -15,17 +15,19 @@ ApkShelf reads the list of apps installed on the current user that have a launch
 - the file paths of the APK files Android has already stored for that app
 - the icon Android shows for that app
 
-ApkShelf does not read your messages, contacts, call logs, location, photos, media, microphone, or camera. It does not read any file other than the APK files above. The installed-app list is never sent off your device.
+ApkShelf does not read your messages, contacts, call logs, location, photos, media, microphone, or camera. It does not read any file other than the APK files above. The installed-app list is never sent off your device. Listing apps and saving APKs happen entirely on your device and do not call a server.
 
 ## Crash reports
 
-ApkShelf uses Google Firebase Crashlytics to receive crash reports so the developer can fix bugs. When the app crashes, Crashlytics collects:
+ApkShelf uses Google Firebase Crashlytics to receive crash reports so the developer can fix bugs. This is the only service in the app that sends data over the internet. When the app crashes, Crashlytics collects:
 
 - a crash log (stack trace and the state of the app at the time)
 - diagnostic information such as device model, operating system version, and app version
 - a Firebase installation identifier that is generated for the app on your device
 
-This information is sent to Google and is used only to find and fix crashes. It does not include the list of apps installed on your device, the APK files you save, or the folder you chose. ApkShelf does not use Firebase Analytics, advertising, or any other tracking service.
+This information is sent to Google and is used only to find and fix crashes. It does not include the list of apps installed on your device, the APK files you save, or the folder you chose. Crash reports are sent only from release builds of the app.
+
+ApkShelf does not use Firebase Analytics, advertising, or any other tracking service. Analytics collection and the advertising ID are switched off in the app, so Google Play services cannot start usage tracking in the background.
 
 Google processes this data under its own terms. See https://firebase.google.com/support/privacy and https://policies.google.com/privacy.
 
